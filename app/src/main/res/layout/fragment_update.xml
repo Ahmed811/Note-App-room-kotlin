@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="@dimen/_24sdp"
+        tools:context=".fragment_screens.update.UpdateFragment">
+
+        <EditText
+            android:id="@+id/updateTitleEd"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/_60sdp"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:background="@drawable/custom_input"
+            android:hint="@string/title"
+            android:paddingStart="@dimen/_24sdp"
+            android:paddingEnd="@dimen/_24sdp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Spinner
+            android:id="@+id/updateSpinnerPriorities"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/_60sdp"
+
+            android:entries="@array/priorities"
+
+            android:layout_marginTop="@dimen/_8sdp"
+            android:paddingStart="@dimen/_20sdp"
+            android:paddingEnd="@dimen/_20sdp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/updateTitleEd" />
+
+        <EditText
+            android:id="@+id/updateDescEd"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginTop="@dimen/_8sdp"
+            android:background="@drawable/custom_input"
+            android:hint="@string/description"
+            android:ems="10"
+            android:paddingStart="@dimen/_24sdp"
+            android:paddingEnd="@dimen/_24sdp"
+            android:paddingTop="@dimen/_16sdp"
+            android:gravity="top|start"
+            android:inputType="textMultiLine"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/updateSpinnerPriorities" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
